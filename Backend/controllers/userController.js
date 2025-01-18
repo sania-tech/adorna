@@ -4,11 +4,25 @@ import jwt from 'jsonwebtoken'
 import userModel from "../models/userModel.js";
 
 
+/**
+ * Description placeholder
+ *
+ * @param {*} id 
+ * @returns {*} 
+ */
 const createToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET)
 }
 
 // Route for user login
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {unknown} 
+ */
 const loginUser = async (req, res) => {
     try {
 
@@ -39,6 +53,14 @@ const loginUser = async (req, res) => {
 }
 
 // Route for user register
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {unknown} 
+ */
 const registerUser = async (req, res) => {
     try {
 
@@ -81,6 +103,14 @@ const registerUser = async (req, res) => {
 }
 
 // Route for admin login
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const adminLogin = async (req, res) => {
     try {
         

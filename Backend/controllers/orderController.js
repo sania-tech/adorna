@@ -1,3 +1,10 @@
+/**
+ * @file Order Management Controller
+ * @description This file contains functions for managing orders in an e-commerce application, 
+ * including COD, Stripe, and Razorpay payment methods, and providing data for the admin panel and frontend.
+ * @module controllers/orderController
+ */
+
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js";
 import Stripe from 'stripe'

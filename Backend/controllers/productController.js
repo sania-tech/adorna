@@ -1,7 +1,18 @@
+
+
 import { v2 as cloudinary } from "cloudinary"
 import productModel from "../models/productModel.js"
 
-// function for add product
+
+
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const addProduct = async (req, res) => {
     try {
 
@@ -47,6 +58,14 @@ const addProduct = async (req, res) => {
 }
 
 // function for list product
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const listProducts = async (req, res) => {
     try {
         
@@ -60,6 +79,14 @@ const listProducts = async (req, res) => {
 }
 
 // function for removing product
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const removeProduct = async (req, res) => {
     try {
         
@@ -73,6 +100,14 @@ const removeProduct = async (req, res) => {
 }
 
 // function for single product info
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const singleProduct = async (req, res) => {
     try {
         

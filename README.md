@@ -1,1 +1,2 @@
-# adorna
+# Adorna
+E-commerce website for a fashion brand that sells clothing and accessories. The website features a clean and modern design, with a focus on showcasing the brand's products in a visually appealing way. The website includes a shopping cart , payment gateway, and user registration system. The website is built using HTML, CSS, and JavaScript, with a database management system to store and retrieve product information. The website also includes a blog section for the brand to share news and updates with their customers. The website is designed to be responsive and accessible on various devices, including desktops, laptops, tablets , and mobile phones.

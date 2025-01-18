@@ -1,7 +1,17 @@
+// add products to user cart
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
+
+
 import userModel from "../models/userModel.js"
 
 
-// add products to user cart
 const addToCart = async (req,res) => {
     try {
         
@@ -33,6 +43,14 @@ const addToCart = async (req,res) => {
 }
 
 // update user cart
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const updateCart = async (req,res) => {
     try {
         
@@ -54,6 +72,14 @@ const updateCart = async (req,res) => {
 
 
 // get user cart data
+/**
+ * Description placeholder
+ *
+ * @async
+ * @param {*} req 
+ * @param {*} res 
+ * @returns {*} 
+ */
 const getUserCart = async (req,res) => {
 
     try {
