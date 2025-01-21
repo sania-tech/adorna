@@ -4,9 +4,11 @@ import App from './App.jsx'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
+// Rendering the App component inside the root div and wrapping it with BrowserRouter
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
 )
+
 

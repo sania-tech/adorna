@@ -1,3 +1,12 @@
+/**
+ * App Component
+ *
+ * Main entry point of the application, handling routing and rendering global components like `Navbar`, `SearchBar`, and `Footer`.
+ * Uses `react-router-dom` for navigation and `react-toastify` for global toast notifications.
+ 
+ 
+ */
+
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './componets/Navbar/'
@@ -12,11 +21,10 @@ import PlaceOrder from './pages/PlaceOrder'
 import Orders from './pages/Orders'
 import Footer from './componets/Footer'
 import SearchBar from './componets/SearchBar'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
 import Home from './pages/Home';
- 
 
 const App = () => {
   return (

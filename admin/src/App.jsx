@@ -9,36 +9,57 @@ import Login from './components/Login'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Environment variables for backend URL and currency symbol
 export const backendUrl = import.meta.env.VITE_BACKEND_URL
 export const currency = '$'
 
+/**
+ * Main App component for the admin dashboard.
+ * This component manages the routes, authentication, and layout.
+ */
 const App = () => {
 
-  const [token, setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):'');
+  // State to store the authentication token
+  const [token, setToken] = useState(localStorage.getItem('token') ? localStorage.getItem('token') : '');
 
-  useEffect(()=>{
-    localStorage.setItem('token',token)
-  },[token])
+  // Store token in localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('token', token)
+  }, [token])
 
   return (
     <div className='bg-gray-50 min-h-screen'>
+      {/* Toast notifications container */}
       <ToastContainer />
-      {token === ""
-        ? <Login setToken={setToken} />
-        : <>
-          <Navbar setToken={setToken} />
-          <hr />
-          <div className='flex w-full'>
-            <Sidebar />
-            <div className='w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base'>
-              <Routes>
-                <Route path='/add' element={<Add token={token} />} />
-                <Route path='/list' element={<List token={token} />} />
-                <Route path='/orders' element={<Orders token={token} />} />
-              </Routes>
+
+      {/* Conditional rendering based on authentication token */}
+      {token === "" 
+        ? (
+          // If no token, show login page
+          <Login setToken={setToken} />
+        ) 
+        : (
+          // If token is available, show the main dashboard layout
+          <>
+            {/* Navbar component with token update functionality */}
+            <Navbar setToken={setToken} />
+            <hr />
+            <div className='flex w-full'>
+              {/* Sidebar component for navigation */}
+              <Sidebar />
+              {/* Main content area */}
+              <div className='w-[70%] mx-auto ml-[max(5vw,25px)] my-8 text-gray-600 text-base'>
+                {/* Routing setup */}
+                <Routes>
+                  {/* Define routes for different pages */}
+                  <Route path='/add' element={<Add token={token} />} />
+                  <Route path='/list' element={<List token={token} />} />
+                  <Route path='/orders' element={<Orders token={token} />} />
+                </Routes>
+              </div>
             </div>
-          </div>
-        </>
+          </>
+        )
       }
     </div>
   )
