@@ -1,16 +1,14 @@
-// Import TextEncoder and TextDecoder from util module
 import { TextEncoder, TextDecoder } from 'util';
 
-// Polyfill for TextEncoder and TextDecoder if they are not defined globally
+// Ensure TextEncoder and TextDecoder are polyfilled if they are not present
 if (typeof global.TextEncoder === 'undefined') {
   global.TextEncoder = TextEncoder;
 }
-
 if (typeof global.TextDecoder === 'undefined') {
   global.TextDecoder = TextDecoder;
 }
 
-// Existing global setup for VITE_BACKEND_URL (mock environment variable)
+// Optionally, you can mock the `import` function for environment variables
 Object.defineProperty(global, 'import', {
   value: {
     meta: {
