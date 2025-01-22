@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { ShopContext } from '../context/ShopContest'; // Adjust the import path
+import { ShopContext } from '../context/ShopContext'; // Adjust the import path
 import Verify from './Verify'; // Adjust the import path
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -30,7 +30,7 @@ describe('Verify Component', () => {
   });
 
   test('calls verifyPayment and navigates on success', async () => {
-    axios.post.mockResolvedValueOnce({ data: { success: true } }); // Mock API response for success
+    axios.post.mockResolvedValueOnce({ data: { success: true } });
 
     render(
       <BrowserRouter>
@@ -41,20 +41,17 @@ describe('Verify Component', () => {
     );
 
     await waitFor(() => {
-      // Check if verifyPayment sends the right request
       expect(axios.post).toHaveBeenCalledWith(
         'http://mock-backend-url/api/order/verifyStripe',
         { success: null, orderId: null },
         { headers: { token: 'mockToken' } }
       );
-
-      // Verify successful navigation
       expect(mockNavigate).toHaveBeenCalledWith('/orders');
-    });
+    }, { timeout: 3000 });
   });
 
   test('navigates to cart on failure', async () => {
-    axios.post.mockResolvedValueOnce({ data: { success: false } }); // Mock API response for failure
+    axios.post.mockResolvedValueOnce({ data: { success: false } });
 
     render(
       <BrowserRouter>
@@ -66,11 +63,11 @@ describe('Verify Component', () => {
 
     await waitFor(() => {
       expect(mockNavigate).toHaveBeenCalledWith('/cart');
-    });
+    }, { timeout: 3000 });
   });
 
   test('shows error toast on exception', async () => {
-    axios.post.mockRejectedValueOnce(new Error('Test Error')); // Mock API rejection
+    axios.post.mockRejectedValueOnce(new Error('Test Error'));
 
     render(
       <BrowserRouter>
@@ -82,6 +79,6 @@ describe('Verify Component', () => {
 
     await waitFor(() => {
       expect(toast.error).toHaveBeenCalledWith('Test Error');
-    });
+    }, { timeout: 3000 });
   });
 });

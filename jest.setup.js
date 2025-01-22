@@ -1,12 +1,18 @@
-import { TextEncoder, TextDecoder } from 'util';
+// Import TextEncoder and TextDecoder polyfills
+import { TextDecoder } from 'util';
 
-// Ensure TextEncoder and TextDecoder are polyfilled if they are not present
-if (typeof global.TextEncoder === 'undefined') {
-  global.TextEncoder = TextEncoder;
-}
 if (typeof global.TextDecoder === 'undefined') {
   global.TextDecoder = TextDecoder;
 }
+
+// Mock react-router-dom to avoid rendering issues related to routing
+jest.mock('react-router-dom', () => ({
+  BrowserRouter: ({ children }) => <div>{children}</div>, // Mock BrowserRouter
+  useNavigate: jest.fn(() => jest.fn()), // Mock useNavigate as a no-op function
+}));
+
+// Mock axios globally
+jest.mock('axios');
 
 // Optionally, you can mock the `import` function for environment variables
 Object.defineProperty(global, 'import', {
@@ -18,3 +24,4 @@ Object.defineProperty(global, 'import', {
     },
   },
 });
+

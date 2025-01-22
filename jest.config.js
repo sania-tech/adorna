@@ -1,3 +1,5 @@
+const { TextEncoder } = require('util');
+
 module.exports = {
   transform: {
     '^.+\\.jsx?$': 'babel-jest',
@@ -15,4 +17,8 @@ module.exports = {
     '\\.(png|jpe?g|gif)$': '<rootDir>/__mocks__/fileMock.js',
   },
 };
+// Ensure TextEncoder and TextDecoder are polyfilled if they are not present
+if (typeof global.TextEncoder === 'undefined') {
+  global.TextEncoder = TextEncoder;
+}
 
