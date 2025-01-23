@@ -19,7 +19,7 @@ const ShopContextProvider = (props) => {
     // Initialize constants and states
     const currency = '$';
     const delivery_fee = 10;
-    const backendUrl =  meta.env.VITE_BACKEND_URL
+    const backendUrl =  "http://localhost:4002"
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
