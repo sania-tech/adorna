@@ -42,10 +42,13 @@ const Navbar = () => {
                     <p>CONTACT</p>
                     <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
                 </NavLink>
-                <NavLink to='https://adorna-admin.vercel.app' className='flex flex-col items-center gap-1'>
-                    <p>Admin</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-                </NavLink>
+                <NavLink 
+  to="https://adorna-admin.vercel.app" 
+  className="flex flex-col items-center gap-1 px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-700 hover:text-white transition-all duration-300 shadow-md"
+>
+  <p>Admin</p>
+  <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+</NavLink>
             </ul>
 
             <div className='flex items-center gap-6'>
