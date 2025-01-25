@@ -24,7 +24,7 @@ import SearchBar from './componets/SearchBar'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Verify from './pages/Verify'
-import Home from './pages/Home';
+import Home from './pages/home';
 
 const App = () => {
   return (
