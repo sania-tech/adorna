@@ -24,32 +24,32 @@ const Navbar = () => {
                 <img src={assets.logo} className='w-36' alt="Adorna Logo" />
             </Link>
             
+            <ul className="hidden sm:flex gap-6 text-sm text-gray-700 items-center -mt-1">
+  <NavLink to="/" className="flex flex-col items-center gap-1 hover:text-black">
+    <p>HOME</p>
+    <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+  </NavLink>
+  <NavLink to="/collection" className="flex flex-col items-center gap-1 hover:text-black">
+    <p>COLLECTION</p>
+    <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+  </NavLink>
+  <NavLink to="/about" className="flex flex-col items-center gap-1 hover:text-black">
+    <p>ABOUT</p>
+    <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+  </NavLink>
+  <NavLink to="/contact" className="flex flex-col items-center gap-1 hover:text-black">
+    <p>CONTACT</p>
+    <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
+  </NavLink>
+  <NavLink
+    to="https://adorna-admin.vercel.app"
+    className="flex items-center justify-center px-5 py-2 rounded-full bg-gray-200 hover:bg-gray-700 hover:text-white transition-all duration-300 shadow-md"
+  >
+    Admin
+  </NavLink>
+</ul>
 
-            <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
-                <NavLink to='/' className='flex flex-col items-center gap-1'>
-                    <p>HOME</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-                </NavLink>
-                <NavLink to='/collection' className='flex flex-col items-center gap-1'>
-                    <p>COLLECTION</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-                </NavLink>
-                <NavLink to='/about' className='flex flex-col items-center gap-1'>
-                    <p>ABOUT</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-                </NavLink>
-                <NavLink to='/contact' className='flex flex-col items-center gap-1'>
-                    <p>CONTACT</p>
-                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-                </NavLink>
-                <NavLink 
-  to="https://adorna-admin.vercel.app" 
-  className="flex flex-col items-center gap-1 px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-700 hover:text-white transition-all duration-300 shadow-md"
->
-  <p>Admin</p>
-  <hr className="w-2/4 border-none h-[1.5px] bg-gray-700 hidden" />
-</NavLink>
-            </ul>
+            
 
             <div className='flex items-center gap-6'>
                 {/* Search Icon */}
