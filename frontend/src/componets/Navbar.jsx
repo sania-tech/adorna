@@ -15,6 +15,7 @@ const Navbar = () => {
         localStorage.removeItem('token');
         setToken('');
         setCartItems({});
+       
     };
 
     return (
@@ -22,6 +23,7 @@ const Navbar = () => {
             <Link to='/'>
                 <img src={assets.logo} className='w-36' alt="Adorna Logo" />
             </Link>
+            
 
             <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
                 <NavLink to='/' className='flex flex-col items-center gap-1'>
@@ -38,6 +40,10 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink to='/contact' className='flex flex-col items-center gap-1'>
                     <p>CONTACT</p>
+                    <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
+                </NavLink>
+                <NavLink to='https://adorna-admin.vercel.app' className='flex flex-col items-center gap-1'>
+                    <p>Admin</p>
                     <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
                 </NavLink>
             </ul>
