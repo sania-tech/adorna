@@ -26,7 +26,5 @@ Welcome to **Adorna**, an e-commerce platform offering a seamless shopping exper
 - **Postman**: For testing APIs.
 - **Git and GitHub**: Version control and repository hosting.
 
-## **How to Run Locally**
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
+## **How to Run the project**
+-https://adorna-frontend.vercel.app
