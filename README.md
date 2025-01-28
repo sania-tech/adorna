@@ -26,7 +26,8 @@ Welcome to **Adorna**, an e-commerce platform offering a seamless shopping exper
 - **Postman**: For testing APIs.
 - **Git and GitHub**: Version control and repository hosting.
 
-## **How to Run the project**
--**https://adorna-frontend.vercel.app**
--**https://adorna-backend.vercel.app**
--**https://adorna-admin.vercel.app**
+## <strong>How to Run the Project</strong><br>
+<a href="https://adorna-frontend.vercel.app">https://adorna-frontend.vercel.app</a><br>
+- <a href="https://adorna-backend.vercel.app">https://adorna-backend.vercel.app</a><br>
+- <a href="https://adorna-admin.vercel.app">https://adorna-admin.vercel.app</a>
+
