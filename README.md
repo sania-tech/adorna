@@ -27,6 +27,6 @@ Welcome to **Adorna**, an e-commerce platform offering a seamless shopping exper
 - **Git and GitHub**: Version control and repository hosting.
 
 ## **How to Run the project**
--https://adorna-frontend.vercel.app
--https://adorna-backend.vercel.app
--https://adorna-admin.vercel.app
+-**https://adorna-frontend.vercel.app**
+-**https://adorna-backend.vercel.app**
+-**https://adorna-admin.vercel.app**
