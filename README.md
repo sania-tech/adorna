@@ -28,3 +28,5 @@ Welcome to **Adorna**, an e-commerce platform offering a seamless shopping exper
 
 ## **How to Run the project**
 -https://adorna-frontend.vercel.app
+-https://adorna-backend.vercel.app
+-https://adorna-admin.vercel.app
