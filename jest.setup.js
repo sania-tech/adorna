@@ -1,9 +1,9 @@
-// Import TextEncoder and TextDecoder polyfills
-import { TextDecoder } from 'util';
+import { TextEncoder, TextDecoder } from 'util';
+// jest.setup.js
+global.TextEncoder = require("util").TextEncoder;
+global.TextDecoder = require("util").TextDecoder;
 
-if (typeof global.TextDecoder === 'undefined') {
-  global.TextDecoder = TextDecoder;
-}
+
 
 // Mock react-router-dom to avoid rendering issues related to routing
 jest.mock('react-router-dom', () => ({
@@ -19,9 +19,8 @@ Object.defineProperty(global, 'import', {
   value: {
     meta: {
       env: {
-        VITE_BACKEND_URL: 'http://localhost:4000', // Mock environment variable
+        VITE_BACKEND_URL: 'http://localhost:4002', // Mock environment variable
       },
     },
   },
 });
-
