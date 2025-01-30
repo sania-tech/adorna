@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // Environment variables for backend URL and currency symbol
 
 export const backendUrl =  "https://adorna-backend.vercel.app"
+
 export const currency = '$'
 
 
